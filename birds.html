@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bird Encyclopedia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function display(sectionId) {
+            document.querySelectorAll(".bird-section").forEach(section => {
+                section.style.display = "none";
+            });
+            document.getElementById(sectionId).style.display = "block";
+        }
+
+        function goBack() {
+            document.querySelectorAll(".bird-section").forEach(section => {
+                section.style.display = "none";
+            });
+            document.getElementById("sectionhomepage").style.display = "block";
+        }
+    </script>
+    <style>
+        .homepage-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .homepage-subcard {
+            width: 180px;
+            height: 80px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .homepage-subcard:hover {
+            background-color: #e0e0e0;
+        }
+
+        .bird-section {
+            display: none;
+            padding: 20px;
+        }
+
+        .bird-card {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body class="firstpage-background">
+    <div class="container">
+        <h1 class="text-center mt-4">Some Types of Birds</h1>
+
+        <div id="sectionhomepage" class="homepage-card">
+            <div class="d-flex flex-wrap justify-content-center mt-4">
+                <div class="homepage-subcard mx-3" onclick="display('sectionbirdtype1')">
+                    <p><strong>Sparrow</strong></p>
+                </div>
+                <div class="homepage-subcard mx-3" onclick="display('sectionbirdtype2')">
+                    <p><strong>Blue Jay</strong></p> 
+                </div>
+                <div class="homepage-subcard mx-3" onclick="display('sectionbirdtype3')">
+                    <p><strong>Peacock</strong></p> 
+                </div>
+                <div class="homepage-subcard mx-3" onclick="display('sectionbirdtype4')">
+                    <p><strong>Robin</strong></p> 
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a style="font-size: 20px;color: red;" href="https://www.linkedin.com/in/aare-pravardhan-11b456260/" target="_blank">
+                    Credits: Pravardhan
+                </a>
+                <p>Facing any problems?</p>
+                <a style="font-size: 20px;color: red;" href="mailto:pravardhanaare@gmail.com" target="_blank">
+                    Email me
+                </a>
+                <p>Address: 4/46-A, Maadannagaaripalli, Nellore - 524343</p>
+                <p>Mobile: <a href="tel:6281883293" style="color: yellow;">6281883293</a></p>
+
+            </div>
+        </div>
+
+        <div id="sectionbirdtype1" class="bird-section">
+            <div class="bird-card">
+                <h1>Sparrow</h1>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/House_sparrow04.jpg" style="width: 240px; height: 180px;" />
+                <p>Sparrows are small birds with short tails and stubby beaks. They are common in cities and rural areas.</p>
+                <button onclick="goBack()" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+
+        <div id="sectionbirdtype2" class="bird-section">
+            <div class="bird-card">
+                <h1>Blue Jay</h1>
+                <img src="http://4.bp.blogspot.com/-6Pm3iqdv3Os/UcAYzO1wkXI/AAAAAAAADRY/ys4r2FPBYUQ/s1600/Beautiful-Blue-Jay-Bird.jpg" style="width: 240px; height: 180px;" />
+                <p>Blue Jays are bright blue birds known for their intelligence and ability to mimic sounds.</p>
+                <button onclick="goBack()" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+
+        <div id="sectionbirdtype3" class="bird-section">
+            <div class="bird-card">
+                <h1>Peacock</h1>
+                <img src="https://youmeandtrends.com/wp-content/uploads/2015/12/peacock-hd-wallpapers-latest-collection.jpeg" style="width: 240px; height: 180px;" />
+                <p>Peacocks are known for their colorful tail feathers and are native to South Asia.</p>
+                <button onclick="goBack()" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+
+        <div id="sectionbirdtype4" class="bird-section">
+            <div class="bird-card">
+                <h1>Robin</h1>
+                <img src="https://images.squarespace-cdn.com/content/v1/5cc8aba2755be21f06ea88af/cac425db-4a54-40a6-8acd-35290e734d24/American+Robin+-+Dave+Zittin.JPG" style="width: 240px; height: 180px;" />
+                <p>Robins are small songbirds with orange chests, commonly seen in North America.</p>
+                <button onclick="goBack()" class="btn btn-primary">Back</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
